@@ -20,12 +20,14 @@ export function OrderSummary({ orderItems, discountPercent, shippingAmount }) {
         const p = getProductById(item.productId);
         if (!p) return null;
         
-        const pkgLabel = getPackageLabel(item.productId, item.packageIndex);
+        const isFree = item.isFree || (item.productId === 'modafresh200' && item.packageIndex === 2);
+        const pkgLabel = isFree ? `${item.qty} Pills` : getPackageLabel(item.productId, item.packageIndex);
         const unitPrice = getPackagePrice(item.productId, item.packageIndex);
         const lineTotal = unitPrice * item.qty;
-        subtotal += lineTotal;
 
-        const isFree = (item.productId === 'modafresh200' && item.packageIndex === 2);
+        if (!isFree) {
+            subtotal += lineTotal;
+        }
 
         return (
             <tr key={idx}>
@@ -33,13 +35,18 @@ export function OrderSummary({ orderItems, discountPercent, shippingAmount }) {
                     <div className="product-cell">
                         <img src={p.image} alt={p.name} loading="lazy" />
                         <div className="info">
-                            <span className="name">{p.name}</span>
-                            <span className="variant">{pkgLabel} × {item.qty}</span>
+                            <span className="name">
+                                {p.name}
+                                {isFree && <span style={{ backgroundColor: 'rgb(39, 174, 96)', color: '#fff', fontSize: '10px', padding: '2px 6px', borderRadius: '20px', fontWeight: 'bold', marginLeft: '6px' }}>FREE</span>}
+                            </span>
+                            <span className="variant">{isFree ? pkgLabel : `${pkgLabel} × ${item.qty}`}</span>
                         </div>
                     </div>
                 </td>
-                <td className="text-center">{item.qty}</td>
-                <td className="text-right price">{formatCurrency(lineTotal)}</td>
+                <td className="text-center">{isFree ? '-' : item.qty}</td>
+                <td className={`text-right price ${isFree ? 'price-free' : ''}`}>
+                    {isFree ? 'Free' : formatCurrency(lineTotal)}
+                </td>
             </tr>
         );
     });

@@ -51,12 +51,14 @@ export function generateEmailHTML(data) {
     orderItems.forEach((item) => {
         const p = getProductById(item.productId);
         if (!p) return;
-        const pkgLabel = getPackageLabel(item.productId, item.packageIndex);
+        const isFree = item.isFree || (item.productId === 'modafresh200' && item.packageIndex === 2);
+        const pkgLabel = isFree ? `${item.qty} Pills` : getPackageLabel(item.productId, item.packageIndex);
         const unitPrice = getPackagePrice(item.productId, item.packageIndex);
         const lineTotal = unitPrice * item.qty;
-        subtotal += lineTotal;
 
-        const isFree = (item.productId === 'modafresh200' && item.packageIndex === 2);
+        if (!isFree) {
+            subtotal += lineTotal;
+        }
 
         itemsHtml += `
             <tr>
@@ -79,7 +81,7 @@ export function generateEmailHTML(data) {
                     </table>
                 </td>
                 <td style="padding: 20px; border-bottom: 1px solid rgb(238, 242, 246); text-align: center; vertical-align: middle; color: rgb(30, 43, 79); font-size: 16px;" align="center" valign="middle">
-                    ${item.qty}
+                    ${isFree ? '-' : item.qty}
                 </td>
                 <td style="padding: 20px; border-bottom: 1px solid rgb(238, 242, 246); text-align: right; vertical-align: middle; color: ${isFree ? 'rgb(39, 174, 96)' : 'rgb(30, 43, 79)'}; font-size: 18px; font-weight: 600;" align="right" valign="middle">
                     ${isFree ? 'Free' : formatCurrency(lineTotal)}
