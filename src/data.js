@@ -104,4 +104,44 @@ export const PRODUCTS = [{
         { label: '300 Pills', price: 329.00 },
         { label: '500 Pills', price: 459.00 }
     ]
+}, {
+    id: 'vidalista40',
+    name: 'Vidalista 40 MG',
+    image: '/vidalista 20.png',
+    packages: [
+        { label: '30 Pills', price: 76.00 },
+        { label: '60 Pills', price: 109.00 },
+        { label: '100 Pills', price: 205.00 },
+        { label: '150 Pills', price: 232.00 }
+    ]
+}, {
+    id: 'vidalista20',
+    name: 'Vidalista 20 MG',
+    image: '/vidalista 20.png',
+    packages: [
+        { label: '30 Pills', price: 76.00 },
+        { label: '60 Pills', price: 101.00 },
+        { label: '100 Pills', price: 128.00 },
+        { label: '150 Pills', price: 199.00 }
+    ]
+}, {
+    id: 'vidalista10',
+    name: 'Vidalista 10 MG',
+    image: '/vidalista 10.png',
+    packages: [
+        { label: '30 Pills', price: 68.00 },
+        { label: '60 Pills', price: 93.00 },
+        { label: '100 Pills', price: 123.00 },
+        { label: '150 Pills', price: 191.00 }
+    ]
+}, {
+    id: 'cenforce100',
+    name: 'Cenforce 100 MG',
+    image: '/cenforce 100.png',
+    packages: [
+        { label: '30 Pills', price: 44.00 },
+        { label: '60 Pills', price: 66.00 },
+        { label: '100 Pills', price: 85.00 },
+        { label: '150 Pills', price: 160.00 }
+    ]
 }];
