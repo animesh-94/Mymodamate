@@ -1,7 +1,7 @@
 export const PRODUCTS = [{
-    id: 'artvigil250',
-    name: 'Artvigil 250mg',
-    image: '/Artvigil.webp',
+    id: 'armoguard250',
+    name: 'ArmoGaurd 250mg',
+    image: '/ArmoGuard 250mg.png',
     packages: [
         { label: '30 Pills', price: 79.00 },
         { label: '60 Pills', price: 119.00 },
